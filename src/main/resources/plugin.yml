@@ -1,0 +1,16 @@
+name: SignEdit
+version: "${pom.version}"
+author: PetteriM1
+main: me.petterim1.signedit.SignEdit
+api: ["1.0.0"]
+
+commands:
+  signedit:
+    permission: signedit
+    description: "SignEdit"
+    usage: "/signedit"
+
+permissions:
+  signedit:
+    default: op
+    description: "SignEdit"
