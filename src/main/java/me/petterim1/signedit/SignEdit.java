@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class SignEdit extends PluginBase implements Listener {
 
-    private Map<Player, Location> editMode = new HashMap<>();
+    private final Map<Player, Location> editMode = new HashMap<>();
 
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
@@ -74,6 +74,8 @@ public class SignEdit extends PluginBase implements Listener {
                 } else {
                     be.setText(text);
                     p.sendMessage("§aDone!");
+
+                    getLogger().info(p.getName() + " updated a sign at " + loc2string(loc));
                 }
             }
         }
